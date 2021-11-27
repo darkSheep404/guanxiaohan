@@ -1,5 +1,5 @@
 const app = getApp()
-let interstitialAd = null
+//let interstitialAd = null
 Page({
 
   /**
@@ -38,14 +38,14 @@ console.log("---------------->")
         console.log(data[0].test)
       }
     })
-    if (wx.createInterstitialAd) {
-      interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-22b7e3bd1176c961'
-      })
-      interstitialAd.onLoad(() => { console.log('onLoad AD')})
-      interstitialAd.onError((err) => {})
-      interstitialAd.onClose(() => {console.log('onClose event emit', res)})
-    }
+    // if (wx.createInterstitialAd) {
+    //   interstitialAd = wx.createInterstitialAd({
+    //     adUnitId: 'adunit-22b7e3bd1176c961'
+    //   })
+    //   interstitialAd.onLoad(() => { console.log('onLoad AD')})
+    //   interstitialAd.onError((err) => {})
+    //   interstitialAd.onClose(() => {console.log('onClose event emit', res)})
+    // }
   },
 
   /**
@@ -59,9 +59,9 @@ console.log("---------------->")
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    interstitialAd.show().catch((err) => {
-      console.error(err)
-    })
+    // interstitialAd.show().catch((err) => {
+    //   console.error(err)
+    // })
   },
 
   /**

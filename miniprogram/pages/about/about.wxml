@@ -18,7 +18,7 @@
     <view class="cu-item arrow">
       <navigator class="content" url="/pages/about/about/about" hover-class="none">
         <image src="/images/aboutproject.png" class="png" mode="aspectFit"></image>
-        <text class="text-grey">关于[查山正]</text>
+        <text class="text-grey">关于[莞小汉]</text>
       </navigator>
     </view> 
     <view class="cu-item arrow">
