@@ -1,25 +1,49 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/home/home",
+    "pages/authorize/authorize",
+    "pages/rank/rank",
+    "pages/about/about",
+    "pages/about/log/log",
+    "pages/correct/correct",
+    "pages/admin/detail/detail",
+    "pages/admin/list/list",
+    "pages/admin/home",
+    "pages/admin/query/query",
+    "pages/admin/adminLogin/login",
+    "pages/admin/tips/tips",
+    "pages/test/home",
+    "pages/test/test/test",
+    "pages/test/result/result"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#2ba245",
+    "navigationBarTitleText": "莞小汉",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "鸣谢",
+        "iconPath": "images/thanks.png",
+        "selectedIconPath": "images/thanks2.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home2.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/about2.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

@@ -1,0 +1,38 @@
+/* miniprogram/pages/home/home.wxss */
+/*
+navigator{
+  margin-top:40rpx;
+}
+navigator{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+*/
+/*
+.mybuttongroup{
+  margin-right: 80rpx;
+  margin-top:40rpx;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
+#leftbutton{
+  margin-top:40rpx;
+position:absolute;
+left: 10%;
+font-size:small;
+width: fit-content;
+}
+#rightbutton{
+  margin-top:40rpx;
+  position:absolute;
+  right: 10%;
+  font-size:small;
+  width: fit-content
+  }
+  page{
+    height: 100%;
+    background-color: #ffffff;
+  }
