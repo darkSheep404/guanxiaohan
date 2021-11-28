@@ -120,6 +120,6 @@ Page({
     })
   },
   onShareAppMessage: function () {
-    title:'关于查山正'
+    title:'关于莞小汉'
   },
 })

@@ -1,1 +1,19 @@
-/* pages/admin/list/list.wxss */
+/* miniprogram/pages/admin/list/list.wxss */
+button{
+  width: 58px;
+  margin-left: 10px
+}
+.mybutton{
+  width: fit-content;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 60%;
+}
+.mybuttonRight{
+  width: fit-content;
+  position: fixed;
+  z-index: 1;
+  right: 0px;
+  top: 60%;
+}

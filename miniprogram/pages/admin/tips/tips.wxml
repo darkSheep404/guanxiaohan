@@ -1,2 +1,23 @@
-<!--pages/admin/tips/tips.wxml-->
-<text>pages/admin/tips/tips.wxml</text>
+<view class="padding bg-white">
+    <view class="padding bg-gradual-green content shadow radius">
+      <view>提示:</view>
+       <text user-select="true"> {{tips}}</text> 
+    </view>
+  </view>
+<view class="cu-form-group margin-top">
+		<view class="title">山正</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'选择山正'}}
+			</view>
+		</picker>
+  </view>
+  <form class="bg-white">
+  <view class="cu-form-group align-start">
+		<view class="title">提示语</view>
+		<textarea maxlength="-1"  bindinput="beizhuInput" value="{{tips}}"></textarea>
+  </view>
+  <button class="cu-btn round bg-green button-hover" style="display:flex;margin-top:10rpx"
+  bindtap="submit" disabled="{{isDisabled}}"
+	>提交</button>
+</form>
