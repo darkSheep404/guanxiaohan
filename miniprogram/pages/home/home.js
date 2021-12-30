@@ -6,6 +6,31 @@ Page({
    * 页面的初始数据
    */
   data: {
+    elements: [{
+      title: '汉服学堂',
+      name: '----',
+      color: 'cyan',
+      icon: 'newsfill'
+    },
+    {
+      title: '汉服安利',
+      name: '----',
+      color: 'blue',
+      icon: 'colorlens'
+    },
+    {
+      title: '汉服答题',
+      name: '----',
+      color: 'purple',
+      icon: 'font'
+    },
+    {
+      title: '资源分享 ',
+      name: '----',
+      color: 'mauve',
+      icon: 'icon'
+    },
+  ],
     included:true,
     storelist: [ {_id: "3f1780f4603144780151fc2e5c318e46", beizhu: "均价:  300元。\n特点：平价店，大店，种类款式多，有男款", storeName: "重回汉唐",official:true}],
     storeName:null,
@@ -38,14 +63,6 @@ console.log("---------------->")
         console.log(data[0].test)
       }
     })
-    // if (wx.createInterstitialAd) {
-    //   interstitialAd = wx.createInterstitialAd({
-    //     adUnitId: 'adunit-22b7e3bd1176c961'
-    //   })
-    //   interstitialAd.onLoad(() => { console.log('onLoad AD')})
-    //   interstitialAd.onError((err) => {})
-    //   interstitialAd.onClose(() => {console.log('onClose event emit', res)})
-    // }
   },
 
   /**
@@ -59,9 +76,7 @@ console.log("---------------->")
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // interstitialAd.show().catch((err) => {
-    //   console.error(err)
-    // })
+  
   },
 
   /**

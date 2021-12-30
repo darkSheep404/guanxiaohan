@@ -1,0 +1,78 @@
+
+  <view>
+   
+<!--tips框-->
+<view>
+  <view class="padding bg-white">
+  <view class="padding bg-gradual-green content shadow radius" >
+    <view>提示:</view>
+  <view wx:for-items="{{tips}}" wx:for-item="tip" wx:key="*this">
+    {{tip}}
+  </view>
+  <text class="text-bold"> 共有{{maxPages}}页,现在在第{{currentPages+1}}页</text>
+ 
+    </view>
+    <view class="cu-form-group">
+		<view class="title">跳转到第</view>
+    <input placeholder="?" class="bg-gray" bindinput="input" type="number"></input>
+    <view class="title" >页</view>
+		<button class="cu-btn bg-green shadow round" bindtap="switchPages" style="width:250rpx">跳转</button>
+	</view>
+
+</view>
+</view>
+  <!--页面跳转框-->
+ 
+<!--列表-->
+<view class="cu-list menu-avatar comment solids-top bg-white">
+<view class="cu-item bg-gradual-green content shadow" wx:for-items="{{storelist}}" wx:for-item="item" wx:key="*this" data-id='{{item._id}}' bindtap='onItemClick' 
+bindlongpress="onItemPress" style="padding: 15rpx 30rpx 0rpx 120rpx;">
+    <image src="/images/logo.png" class="cu-avatar round"> </image>
+    <view class="content">
+      <view class="text-title">{{item.storeName}} 
+        <text wx:if="{{item.official}}" class="text-blod"> \t : [正店]</text>
+        <text wx:if="{{!item.official}}" class="text-blod"> \t: [山店]</text></view>
+      <text class="text-title">
+       
+      </text>
+      <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+        <view class="flex">
+          <view>备注：</view>
+          <view class="flex-sub"><text>{{item.beizhu}}</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+</view>
+ <!--两个固定的翻页按钮-->
+ <view>
+    <button class="cu-btn f1 round bg-white mybutton" style="width:fit-content" bindtap="prevPage" wx:if="{{currentPages}}">上一页</button>
+    <button class="cu-btn f1 round bg-white mybuttonRight" style="width:fit-content"
+    bindtap="nextPage" wx:if="{{maxPages-currentPages}}"
+    >下一页</button>
+  </view>
+
+<!--弹窗-->
+<view class="cu-modal {{loadModel?'show':''}}">
+  <view class="cu-dialog">
+    <view class="padding-xl">
+      确定要删除该店铺信息吗
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <!--待更改为具体操作-->
+        <button class="cu-btn line-green text-green" bindtap="hideModal" 
+        style="width: 58px;">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="delItem" style="width: 58px;margin-left:10px">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='cu-load load-modal' wx:if="{{loadModel2}}">
+  <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+  <image src='/images/logo.png' class='png' mode='aspectFit'></image>
+  <view class='gray-text'>加载中...</view>
+</view>
