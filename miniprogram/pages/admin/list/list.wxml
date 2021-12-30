@@ -64,7 +64,7 @@ bindlongpress="onItemPress" style="padding: 15rpx 30rpx 0rpx 120rpx;">
     <view class="cu-bar bg-white justify-end">
       <view class="action">
         <!--待更改为具体操作-->
-        <button class="cu-btn line-green text-green" bindtap="hideModal" 
+        <button class="cu-btn line-green text-green" bindtap="hideModel" 
         style="width: 58px;">取消</button>
         <button class="cu-btn bg-green margin-left" bindtap="delItem" style="width: 58px;margin-left:10px">确定</button>
       </view>

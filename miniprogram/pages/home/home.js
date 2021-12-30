@@ -56,9 +56,11 @@ console.log("---------------->")
       success:function(res)
       {
 
-        var data=res.result.tips.data
+        var data=res.result.tips.data[0].test;
+        //换行符放入云数据库会被转义,故更换转移符号
+        data=data.replaceAll("\\n","\n");
         that.setData({
-          tips:data[0].test
+          tips:data
         })
         console.log(data[0].test)
       }

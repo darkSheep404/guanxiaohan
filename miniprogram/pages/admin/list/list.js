@@ -77,7 +77,8 @@ Page({
         that.setData({
           loadModel:false
         })
-        console.log("删除了一个店铺数据")   
+        console.log("删除了一个店铺数据")
+        that.getStoreList(that.data.currentPages)
       },
       fail: console.error
     })
@@ -136,6 +137,7 @@ console.log("---------------->")
         that.setData({
           //向下取整:13=4*3+1 3,3,3,3,1共5页
           //
+          loadModel2:false,
           maxPages:Math.floor(data/10)+1
         })
         console.log("最大页面数",that.data.maxPages)
